@@ -1,0 +1,15 @@
+{
+  "theorem_names": [
+    "CMR.master_equation_monotone",
+    "CMR.tt_bounded_error_parameterized",
+    "CMR.tensor_rank_complexity_scaling",
+    "CMR.master_update_contraction",
+    "CMR.lax_equivalence_consistency_derived",
+    "CMR.computable_step_bounded"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

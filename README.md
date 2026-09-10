@@ -98,7 +98,7 @@ The Compressed Manifold Reachability (CMR) framework provides fail-safe, real-ti
 This project is open-source software licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 
 ### 📜 Commercial Exemption & Proprietary Integration
-If your organization requires integrating CMR into proprietary commercial stacks, closed-source robotics firmware, or hardware products without the copyleft obligations of the AGPL-3.0, dual-licensing commercial exemptions are available.
+If your organization requires integrating the CMR Framework into proprietary commercial stacks, closed-source robotics firmware, or hardware products without the copyleft obligations of the AGPL-3.0, dual-licensing commercial exemptions are available.
 
 ### 💼 To secure a commercial exemption or license, please contact:
 Licensing Agent - J.E. Randolph 📧 [700josh.r@gmail.com](mailto:700josh.r@gmail.com)

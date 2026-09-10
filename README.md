@@ -1,5 +1,5 @@
 # <p align="center">🤖 **COMPRESSED MANIFOLD REACHABILITY** 🤖</p>
-## <p align="center">(CMR FRAMEWORK)</p>
+## <p align="center">(CMR-FRAMEWORK)</p>
 <p align="center">
   <img src="https://img.shields.io/badge/Lean-4-blue?style=for-the-badge&logo=lean4" alt="Lean 4">
   <img src="https://img.shields.io/badge/License-AGPL%203.0-green?style=for-the-badge" alt="License: AGPL v3.0">

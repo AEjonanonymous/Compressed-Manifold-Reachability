@@ -90,8 +90,16 @@ All high-dimensional CMR verification tests passed with polynomial scaling.
 
 ---
 
-## 🏢 Commercial Application
-The Compressed Manifold Reachability (CMR) framework provides fail-safe, real-time safety guarantees for high-dimensional autonomous systems, multi-joint robotic arms, aerospace guidance controllers, and defense-grade edge hardware. Commercial deployment requires strict adherence to IP licensing bounds.
+🏢 **Commercial Application**
+
+**Multi-Axis Industrial Robotics & Advanced Manufacturing**  
+Eliminates motion-planning bottlenecks for complex robotic systems with six or more degrees of freedom ($d \ge 6$). By replacing exponential grid expansion with polynomial scaling, multi-joint arms can execute real-time, collision-free path planning through dense, dynamic manufacturing cells without computational stalling.
+
+**Aerospace Guidance & Autonomous Flight Systems**  
+Delivers real-time, mathematically certified safety envelopes for flight controllers and unmanned systems. The framework replaces heuristic trajectory adjustments with deterministic boundaries, ensuring strict compliance and safety validation for high-DOF airborne platforms operating in unpredictable airspace.
+
+**Defense-Grade Edge Hardware & Tactical Systems**  
+Provides microsecond-level safety overrides tailored for resource-constrained embedded platforms and FPGA edge hardware. This capability ensures fail-safe reaction speeds and absolute operational reliability in high-stakes, adversarial environments where calculation latency translates to mission failure.
 
 ---
 

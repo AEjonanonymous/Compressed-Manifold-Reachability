@@ -1,4 +1,4 @@
-# <p align="center">🚀 **COMPRESSED MANIFOLD REACHABILITY (CMR)** 🚀</p>
+# <p align="center">🤖 **COMPRESSED MANIFOLD REACHABILITY (CMR)** 🤖</p>
 <p align="center">
   <img src="https://img.shields.io/badge/Lean-4-blue?style=for-the-badge&logo=lean4" alt="Lean 4">
   <img src="https://img.shields.io/badge/License-AGPL%203.0-green?style=for-the-badge" alt="License: AGPL v3.0">
@@ -9,7 +9,7 @@
 ### <p align="center">A Formally Proven, Polynomial-Scaling Safety Algorithm for High-Dimensional Robotic Systems ($d \ge 6$)</p>
 ---
 
-## 🌌 **Curing the Curse of Dimensionality**
+## 💊 **Curing the Curse of Dimensionality**
 
 Real-time safety verification for high-dimensional robotic systems ($d \ge 6$) has historically hit an insurmountable brick wall: **The Curse of Dimensionality**. Traditional grid-based Hamilton-Jacobi reachability requires solving the terminal-value Hamilton-Jacobi-Bellman (HJB) partial differential equation across a uniform spatial grid, resulting in an explosive exponential memory and compute footprint of $\mathcal{O}(G^d)$. 
 
@@ -17,18 +17,20 @@ The **Compressed Manifold Reachability (CMR)** framework resolves this exponenti
 
 ---
 
-## ⚔️ **The Three-Pronged Attack Architecture**
+## 🔱 **The Three-Pronged Architecture**
 
 CMR bypasses grid expansion through three structural components sequenced into a unified iterative master equation:
 
-1. **Prong 1: Global Tensor-Train Representation ($\mathcal{P}_{\text{TT}}$)**   
-   Maintains the high-dimensional value function $V(x)$ as a contracted chain of low-rank core matrices $G_1(x_1)G_2(x_2)...G_d(x_d)$ via TT-Cross adaptive sampling. This strictly bounds memory complexity to polynomial limits: $\mathcal{O}(d \cdot r^2 \cdot G)$
-2. **Prong 2: Local Deterministic Base Kernel (Subspace Solver)**   
-   Restricts heavy numerical PDE updates strictly to low-dimensional sub-blocks ($d_k \le 3$) using localized Lax-Friedrichs Hamilton-Jacobi solvers, computing exact backward reachable subsets with zero floating-point solver latency.
-3. **Prong 3: Max-Plus Global Fabric Synthesizer ($\bigoplus$)**   
-   Recomposes solved local subspace updates into a unified global representation using pointwise algebraic max-plus/min-plus envelope operators, ensuring continuous safety boundaries without spatial gaps or under-conservative margins.
+**Prong 1: Global Tensor-Train Representation ($\mathcal{P}_{\text{TT}}$)**   
+Maintains the high-dimensional value function $V(x)$ as a contracted chain of low-rank core matrices $G_1(x_1)G_2(x_2)...G_d(x_d)$ via TT-Cross adaptive sampling. This strictly bounds memory complexity to polynomial limits: $\mathcal{O}(d \cdot r^2 \cdot G)$
 
-### **The Master (CMR) Equation:**
+**Prong 2: Local Deterministic Base Kernel (Subspace Solver)**   
+Restricts heavy numerical PDE updates strictly to low-dimensional sub-blocks ($d_k \le 3$) using localized Lax-Friedrichs Hamilton-Jacobi solvers, computing exact backward reachable subsets with zero floating-point solver latency.
+
+**Prong 3: Max-Plus Global Fabric Synthesizer ($\bigoplus$)**   
+Recomposes solved local subspace updates into a unified global representation using pointwise algebraic max-plus/min-plus envelope operators, ensuring continuous safety boundaries without spatial gaps or under-conservative margins.
+
+### <p align="center"> 🔑 **The Master (CMR) Algorithm** 🔓</p>
 $$V^{(n+1)}(x) = \mathcal{P}_{\text{TT}} \left( \bigoplus_{k=1}^{M} \left( V_k^{(n)}(x_k) - \Delta t \cdot H_k(x_k, \nabla V_k^{(n)}(x_k)) \right) \right)$$
 
 ---
@@ -37,6 +39,7 @@ $$V^{(n+1)}(x) = \mathcal{P}_{\text{TT}} \left( \bigoplus_{k=1}^{M} \left( V_k^{
 
 | File Name | Description & Functional Role |
 | :--- | :--- |
+| `CompressedManifoldReachability.pdf` | Comprehensive foundational manuscript detailing the mathematical architecture, six Lean 4 formal proofs, C++ engine, and SystemVerilog AXI-Lite verification pipeline. |
 | `CompressedManifoldReachability.lean` | Complete Lean 4 formal verification file containing all six foundational mathematical proofs and structural definitions. |
 | `Challenge.lean` | Open challenge verification file establishing unproven lemma structures for interactive theorem provers. |
 | `Solution.lean` |  Complete solution file providing machine-checked proofs for the Lean verification roadmap and comparator workflows. |
@@ -49,7 +52,7 @@ $$V^{(n+1)}(x) = \mathcal{P}_{\text{TT}} \left( \bigoplus_{k=1}^{M} \left( V_k^{
 
 ## ✅ **Formal Verification in Lean 4 & Comparator**
 
-The entire CMR framework is rigorously machine-verified in **Lean 4** (v4.33.0 with mathlib and cslib), bridging abstract mathematical design with infallible logical certainty:
+The entire CMR framework is rigorously machine-verified in **Lean 4** (v4.33.0 with mathlib and cslib), bridging abstract mathematical design with logical certainty:
 
 1. **Theorem 1 (Monotonicity of the Master Update Fabric):** Proves that pointwise max-plus envelope operators preserve safety inclusions ($V_1 \le V_2 \implies \bigoplus V_1 \le \bigoplus V_2$), eliminating interpolation blind spots.
 2. **Theorem 2 (Parameterized Tensor-Train Bounded Error Projection):** Establishes that low-rank compression ($P_{TT}$) maintains bounded approximation error $\| V - P_{TT}(V) \| \le \epsilon(r)$, protecting critical zero-level safety contours.
@@ -60,7 +63,7 @@ The entire CMR framework is rigorously machine-verified in **Lean 4** (v4.33.0 w
 
 ---
 
-## ⚡ **Software & Hardware Verification**
+## 🛡️ **Software & Hardware Verification**
 
 ### **C++ Software Validation (`CMR_engine.hpp` + `test_bench.cpp`)**
 ```text
@@ -84,13 +87,22 @@ All high-dimensional CMR verification tests passed with polynomial scaling.
 [COMMERCIAL IP PASS] AXI-Lite Pipeline Verified Successfully.
 ```
 
+---
+
 ## 🏢 Commercial Application
 The Compressed Manifold Reachability (CMR) framework provides fail-safe, real-time safety guarantees for high-dimensional autonomous systems, multi-joint robotic arms, aerospace guidance controllers, and defense-grade edge hardware. Commercial deployment requires strict adherence to IP licensing bounds.
 
-## 📜 License & Dual-Licensing Policy
+---
+
+## ⚖️ License & Dual-Licensing Policy
 This project is open-source software licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 
-Commercial Exemption & Proprietary Integration
+### 📜 Commercial Exemption & Proprietary Integration
 If your organization requires integrating CMR into proprietary commercial stacks, closed-source robotics firmware, or hardware products without the copyleft obligations of the AGPL-3.0, dual-licensing commercial exemptions are available.
 
-💼 To secure a commercial exemption or license, please contact your designated licensing agent.
+### 💼 To secure a commercial exemption or license, please contact:
+Licensing Agent - J.E. Randolph 📧 [700josh.r@gmail.com](mailto:700josh.r@gmail.com)
+
+---
+
+© 2026 Jonathan ƒ(n) Reed. All rights reserved.

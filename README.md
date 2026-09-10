@@ -1,6 +1,4 @@
-# <p align="center">🚀 **COMPRESSED MANIFOLD REACHABILITY (CMR)** 🚀</p>
-<p align="center"><b>A Formally Proven, Polynomial-Scaling Safety Algorithm for High-Dimensional Robotic Systems ($d \ge 6$)</b></p>
-
+# <p align="center">🚀 **THE CMR FRAMEWORK** 🚀</p>
 <p align="center">
   <img src="https://img.shields.io/badge/Lean-4-blue?style=for-the-badge&logo=lean4" alt="Lean 4">
   <img src="https://img.shields.io/badge/License-AGPL%203.0-green?style=for-the-badge" alt="License: AGPL v3.0">
@@ -8,13 +6,14 @@
   <img src="https://img.shields.io/badge/C++-Header--Only-purple?style=for-the-badge" alt="C++">
 </p>
 
+### <p align="center">A Formally Proven, Polynomial-Scaling Safety Algorithm for High-Dimensional Robotic Systems ($d \ge 6$)</p>
 ---
 
-## 🌌 **Shedding the Curse of Dimensionality**
+## 🌌 **Curing the Curse of Dimensionality**
 
 Real-time safety verification for high-dimensional robotic systems ($d \ge 6$) has historically hit an insurmountable brick wall: **The Curse of Dimensionality**. Traditional grid-based Hamilton-Jacobi reachability requires solving the terminal-value Hamilton-Jacobi-Bellman (HJB) partial differential equation across a uniform spatial grid, resulting in an explosive exponential memory and compute footprint of $\mathcal{O}(G^d)$. 
 
-The **Compressed Manifold Reachability (CMR)** framework completely shatters this exponential bottleneck. By introducing an airtight architectural synthesis of tensor-train low-rank projections, local subspace solvers, and max-plus global envelopes, CMR achieves tractable **polynomial scaling ($\mathcal{O}(d \cdot r^2 \cdot G)$)** while preserving absolute mathematical determinism.
+The **Compressed Manifold Reachability (CMR)** framework resolves this exponential bottleneck. By introducing an architectural synthesis of tensor-train low-rank projections, local subspace solvers, and max-plus global envelopes, CMR achieves tractable **polynomial scaling ($\mathcal{O}(d \cdot r^2 \cdot G)$)** while preserving absolute mathematical determinism.
 
 ---
 
@@ -70,3 +69,27 @@ Running Parameterized CMR Engine Test Bench (d >= 6)...
 [PASS] Prong 3: Max-Plus Monotonicity Fabric
 [PASS] Master Equation Step (d = 6, rank = 4) Executed Successfully
 All high-dimensional CMR verification tests passed with polynomial scaling.
+```
+
+### Hardware RTL Simulation (cmr_axi_pipeline.sv + testbench.sv)
+Plaintext
+[2026-09-09 19:16:41 UTC] iverilog -Wall -g2012 design.sv testbench.sv && unbuffer vvp a.out
+[INFO] Initializing CMR AXI-Lite Hardware Testbench...
+[INFO] Writing test vectors across d = 6 dimensions...
+[INFO] Triggering hardware execution pulse...
+[INFO] Polling AXI-Lite bus for completion and safety result...
+[RESULTS SUMMARY]
+  - Hardware Done Status Flag : 1
+  - Read Safety Result (0x38) : 50
+[COMMERCIAL IP PASS] AXI-Lite Pipeline Verified Successfully.
+
+## 🏢 Commercial Application (Placeholder)
+The Compressed Manifold Reachability (CMR) framework provides fail-safe, real-time safety guarantees for high-dimensional autonomous systems, multi-joint robotic arms, aerospace guidance controllers, and defense-grade edge hardware. Commercial deployment requires strict adherence to IP licensing bounds.
+
+## 📜 License & Dual-Licensing Policy
+This project is open-source software licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+Commercial Exemption & Proprietary Integration
+If your organization requires integrating CMR into proprietary commercial stacks, closed-source robotics firmware, or hardware products without the copyleft obligations of the AGPL-3.0, dual-licensing commercial exemptions are available.
+
+💼 To secure a commercial exemption or license, please contact your designated licensing agent.

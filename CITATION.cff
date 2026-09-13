@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite this research as follows."
+authors:
+  - name: "Jonathan ƒ(n)"
+title: "Compressed Manifold Reachability - A Formally Proven Polynomial-Scaling Safety Algorithm for High-Dimensional Robotic Systems (d ≥ 6)"
+version: 1.0.0
+doi: 10.5281/zenodo.22683309
+date-released: 2026-09-10

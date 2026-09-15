@@ -1,4 +1,6 @@
 {
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
   "theorem_names": [
     "CMR.master_equation_monotone",
     "CMR.tt_bounded_error_parameterized",
